@@ -1,0 +1,613 @@
+2019-03-12 19:43:08,417 INFO ## @package parameters
+#--------------------------------------------------------------------------------
+#                                 PARAMETROS
+#--------------------------------------------------------------------------------
+num_epochs = 30
+batch_size = 2
+learning_rate = 0.001
+momentum= 0.9 #solo para SGD
+
+#arquitectura
+nombreArq= "RedW" #sin .py
+
+# optimizador
+tipoOptim= "Adam" #pueden ser "Adam", "Adadelta" o "SGD"
+
+# funcion de perdida
+tipoLoss= "CrossEntropy" #pueden ser "CrossEntropy", "BCE", "BCEwLogits" o "MSE"
+
+#%%   DATA
+cant_train= 2#38           #cantidad de modulos de entrenamiento para cargar
+val_split= 0.15         #porcentaje de imagenes de entrenamiento usadas para validar
+nameData= "etapa3"            #extra que se agrega al nombre para guardar (util para no sobreescribir)
+
+#%%   MODELO
+pathAnterior= "../modelo/Adam_CrossEntropy_etapa2"    #path a modelo a cargar. Si esta vacio, entrena desde 0
+nameModel= "etapa3"       #extra que se agrega al nombre para guardar (util para no sobreescribir)
+
+#%% PATHS
+DATA_PATH = "../data/"
+MODEL_STORE_PATH = "../modelo/"+tipoOptim+"_"+tipoLoss+"_"+nameModel
+OUT_PATH= "../salida/"+nameData
+PREDICT_PATH= "../salida/"+"predicciones/"+nameData
+REALES_PATH= "../inferencias/"+nameData
+
+#%% SALIDA
+verGraficas= False #indica si ver salidas intermedias online
+cadaCuantas= 1 #cada cuantas epocas guardar graficas de entrenamiento
+cadaCuantos= 300 #cada cuantos batches guardar predicciones intermedias
+cadaCuantosVal= 60 #cada cuantos batches guardar predicciones intermedias en validacion
+cadaCuantosTest= 20 #cada cuantos batches guardar predicciones intermedias en test
+
+2019-03-12 19:44:30,716 INFO ## @package parameters
+#--------------------------------------------------------------------------------
+#                                 PARAMETROS
+#--------------------------------------------------------------------------------
+num_epochs = 30
+batch_size = 2
+learning_rate = 0.001
+momentum= 0.9 #solo para SGD
+
+#arquitectura
+nombreArq= "RedW" #sin .py
+
+# optimizador
+tipoOptim= "Adam" #pueden ser "Adam", "Adadelta" o "SGD"
+
+# funcion de perdida
+tipoLoss= "CrossEntropy" #pueden ser "CrossEntropy", "BCE", "BCEwLogits" o "MSE"
+
+#%%   DATA
+cant_train= 2#38           #cantidad de modulos de entrenamiento para cargar
+val_split= 0.15         #porcentaje de imagenes de entrenamiento usadas para validar
+nameData= "etapa3"            #extra que se agrega al nombre para guardar (util para no sobreescribir)
+
+#%%   MODELO
+pathAnterior= "../modelo/Adam_CrossEntropy_etapa2"    #path a modelo a cargar. Si esta vacio, entrena desde 0
+nameModel= "etapa3"       #extra que se agrega al nombre para guardar (util para no sobreescribir)
+
+#%% PATHS
+DATA_PATH = "../data/"
+MODEL_STORE_PATH = "../modelo/"+tipoOptim+"_"+tipoLoss+"_"+nameModel
+OUT_PATH= "../salida/"+nameData
+PREDICT_PATH= "../salida/"+"predicciones/"+nameData
+REALES_PATH= "../inferencias/"+nameData
+
+#%% SALIDA
+verGraficas= False #indica si ver salidas intermedias online
+cadaCuantas= 1 #cada cuantas epocas guardar graficas de entrenamiento
+cadaCuantos= 300 #cada cuantos batches guardar predicciones intermedias
+cadaCuantosVal= 60 #cada cuantos batches guardar predicciones intermedias en validacion
+cadaCuantosTest= 20 #cada cuantos batches guardar predicciones intermedias en test
+
+2019-03-12 19:44:33,022 INFO CrossEntropyLoss()
+2019-03-12 19:44:33,023 INFO Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.001
+    weight_decay: 0
+)
+2019-03-12 19:44:40,774 INFO Epoch [15/44], Step [1/5437], Loss: 0.0015, Accuracy: 98.418%, Jaccard: 95.779%
+2019-03-12 19:44:41,475 INFO Epoch [15/44], Step [2/5437], Loss: 0.0018, Accuracy: 86.662%, Jaccard: 86.148%
+2019-03-12 19:44:42,178 INFO Epoch [15/44], Step [3/5437], Loss: 0.0027, Accuracy: 83.878%, Jaccard: 82.121%
+2019-03-12 19:44:42,874 INFO Epoch [15/44], Step [4/5437], Loss: 0.0013, Accuracy: 77.359%, Jaccard: 76.874%
+2019-03-12 19:44:43,569 INFO Epoch [15/44], Step [5/5437], Loss: 0.0337, Accuracy: 74.714%, Jaccard: 74.409%
+2019-03-12 19:44:44,270 INFO Epoch [15/44], Step [6/5437], Loss: 0.0073, Accuracy: 76.835%, Jaccard: 75.781%
+2019-03-12 19:44:44,971 INFO Epoch [15/44], Step [7/5437], Loss: 0.0017, Accuracy: 86.934%, Jaccard: 86.379%
+2019-03-12 19:44:45,670 INFO Epoch [15/44], Step [8/5437], Loss: 0.0009, Accuracy: 66.193%, Jaccard: 65.788%
+2019-03-12 19:44:46,367 INFO Epoch [15/44], Step [9/5437], Loss: 0.0206, Accuracy: 71.919%, Jaccard: 71.219%
+2019-03-12 19:44:47,062 INFO Epoch [15/44], Step [10/5437], Loss: 0.0023, Accuracy: 73.720%, Jaccard: 72.852%
+2019-03-12 19:44:47,759 INFO Epoch [15/44], Step [11/5437], Loss: 0.0021, Accuracy: 98.599%, Jaccard: 97.951%
+2019-03-12 19:44:48,461 INFO Epoch [15/44], Step [12/5437], Loss: 0.0030, Accuracy: 97.649%, Jaccard: 95.550%
+2019-03-12 19:44:49,162 INFO Epoch [15/44], Step [13/5437], Loss: 0.0685, Accuracy: 78.973%, Jaccard: 77.595%
+2019-03-12 19:44:49,857 INFO Epoch [15/44], Step [14/5437], Loss: 0.0018, Accuracy: 78.229%, Jaccard: 77.779%
+2019-03-12 19:44:50,556 INFO Epoch [15/44], Step [15/5437], Loss: 0.0158, Accuracy: 60.721%, Jaccard: 59.838%
+2019-03-12 19:44:51,266 INFO Epoch [15/44], Step [16/5437], Loss: 0.0114, Accuracy: 45.309%, Jaccard: 45.179%
+2019-03-12 19:44:51,962 INFO Epoch [15/44], Step [17/5437], Loss: 0.0452, Accuracy: 39.375%, Jaccard: 38.931%
+2019-03-12 19:44:52,660 INFO Epoch [15/44], Step [18/5437], Loss: 0.0028, Accuracy: 71.546%, Jaccard: 70.902%
+2019-03-12 19:44:53,364 INFO Epoch [15/44], Step [19/5437], Loss: 0.0025, Accuracy: 98.784%, Jaccard: 97.772%
+2019-03-12 19:44:54,061 INFO Epoch [15/44], Step [20/5437], Loss: 0.0037, Accuracy: 96.272%, Jaccard: 93.948%
+2019-03-12 19:44:54,757 INFO Epoch [15/44], Step [21/5437], Loss: 0.0094, Accuracy: 54.729%, Jaccard: 53.499%
+2019-03-12 19:44:55,454 INFO Epoch [15/44], Step [22/5437], Loss: 0.0041, Accuracy: 73.737%, Jaccard: 72.770%
+2019-03-12 19:44:56,157 INFO Epoch [15/44], Step [23/5437], Loss: 0.0078, Accuracy: 66.294%, Jaccard: 64.821%
+2019-03-12 19:44:56,867 INFO Epoch [15/44], Step [24/5437], Loss: 0.0046, Accuracy: 78.256%, Jaccard: 77.491%
+2019-03-12 19:44:57,577 INFO Epoch [15/44], Step [25/5437], Loss: 0.0178, Accuracy: 61.324%, Jaccard: 60.801%
+2019-03-12 19:44:58,273 INFO Epoch [15/44], Step [26/5437], Loss: 0.0069, Accuracy: 77.177%, Jaccard: 76.177%
+2019-03-12 19:44:58,971 INFO Epoch [15/44], Step [27/5437], Loss: 0.0016, Accuracy: 99.502%, Jaccard: 99.003%
+2019-03-12 19:44:59,669 INFO Epoch [15/44], Step [28/5437], Loss: 0.0052, Accuracy: 56.621%, Jaccard: 56.368%
+2019-03-12 19:45:00,373 INFO Epoch [15/44], Step [29/5437], Loss: 0.0158, Accuracy: 61.233%, Jaccard: 59.952%
+2019-03-12 19:45:01,074 INFO Epoch [15/44], Step [30/5437], Loss: 0.0115, Accuracy: 72.939%, Jaccard: 70.950%
+2019-03-12 19:45:01,779 INFO Epoch [15/44], Step [31/5437], Loss: 0.0815, Accuracy: 71.727%, Jaccard: 71.076%
+2019-03-12 19:45:02,478 INFO Epoch [15/44], Step [32/5437], Loss: 0.0070, Accuracy: 87.401%, Jaccard: 86.548%
+2019-03-12 19:45:03,178 INFO Epoch [15/44], Step [33/5437], Loss: 0.0097, Accuracy: 76.608%, Jaccard: 75.065%
+2019-03-12 19:45:03,877 INFO Epoch [15/44], Step [34/5437], Loss: 0.0055, Accuracy: 73.626%, Jaccard: 73.289%
+2019-03-12 19:45:04,578 INFO Epoch [15/44], Step [35/5437], Loss: 0.0058, Accuracy: 62.535%, Jaccard: 61.966%
+2019-03-12 19:45:05,278 INFO Epoch [15/44], Step [36/5437], Loss: 0.0025, Accuracy: 98.675%, Jaccard: 97.471%
+2019-03-12 19:45:05,978 INFO Epoch [15/44], Step [37/5437], Loss: 0.0144, Accuracy: 62.542%, Jaccard: 61.692%
+2019-03-12 19:45:06,682 INFO Epoch [15/44], Step [38/5437], Loss: 0.0055, Accuracy: 62.203%, Jaccard: 61.439%
+2019-03-12 19:45:07,388 INFO Epoch [15/44], Step [39/5437], Loss: 0.0042, Accuracy: 98.111%, Jaccard: 96.193%
+2019-03-12 19:45:08,086 INFO Epoch [15/44], Step [40/5437], Loss: 0.0044, Accuracy: 65.610%, Jaccard: 64.728%
+2019-03-12 19:45:08,790 INFO Epoch [15/44], Step [41/5437], Loss: 0.0103, Accuracy: 73.287%, Jaccard: 72.556%
+2019-03-12 19:45:09,492 INFO Epoch [15/44], Step [42/5437], Loss: 0.0051, Accuracy: 63.152%, Jaccard: 62.519%
+2019-03-12 19:45:10,191 INFO Epoch [15/44], Step [43/5437], Loss: 0.0050, Accuracy: 87.821%, Jaccard: 86.599%
+2019-03-12 19:45:10,893 INFO Epoch [15/44], Step [44/5437], Loss: 0.0234, Accuracy: 53.943%, Jaccard: 51.740%
+2019-03-12 19:45:11,599 INFO Epoch [15/44], Step [45/5437], Loss: 0.0009, Accuracy: 99.277%, Jaccard: 98.613%
+2019-03-12 19:45:12,297 INFO Epoch [15/44], Step [46/5437], Loss: 0.0293, Accuracy: 68.965%, Jaccard: 66.033%
+2019-03-12 19:45:12,993 INFO Epoch [15/44], Step [47/5437], Loss: 0.0041, Accuracy: 85.541%, Jaccard: 84.108%
+2019-03-12 19:45:13,692 INFO Epoch [15/44], Step [48/5437], Loss: 0.0192, Accuracy: 56.143%, Jaccard: 55.764%
+2019-03-12 19:45:14,391 INFO Epoch [15/44], Step [49/5437], Loss: 0.0019, Accuracy: 86.593%, Jaccard: 85.662%
+2019-03-12 19:45:15,097 INFO Epoch [15/44], Step [50/5437], Loss: 0.0097, Accuracy: 51.244%, Jaccard: 50.224%
+2019-03-12 19:45:15,799 INFO Epoch [15/44], Step [51/5437], Loss: 0.0516, Accuracy: 34.807%, Jaccard: 34.052%
+2019-03-12 19:45:16,502 INFO Epoch [15/44], Step [52/5437], Loss: 0.0196, Accuracy: 68.776%, Jaccard: 61.419%
+2019-03-12 19:45:17,203 INFO Epoch [15/44], Step [53/5437], Loss: 0.0521, Accuracy: 53.487%, Jaccard: 48.057%
+2019-03-12 19:45:17,901 INFO Epoch [15/44], Step [54/5437], Loss: 0.0043, Accuracy: 80.830%, Jaccard: 78.231%
+2019-03-12 19:45:18,597 INFO Epoch [15/44], Step [55/5437], Loss: 0.0236, Accuracy: 65.071%, Jaccard: 62.291%
+2019-03-12 19:45:19,297 INFO Epoch [15/44], Step [56/5437], Loss: 0.0282, Accuracy: 44.177%, Jaccard: 38.693%
+2019-03-12 19:45:19,997 INFO Epoch [15/44], Step [57/5437], Loss: 0.1069, Accuracy: 59.279%, Jaccard: 56.734%
+2019-03-12 19:45:20,700 INFO Epoch [15/44], Step [58/5437], Loss: 0.0069, Accuracy: 79.689%, Jaccard: 78.798%
+2019-03-12 19:45:21,402 INFO Epoch [15/44], Step [59/5437], Loss: 0.0515, Accuracy: 58.935%, Jaccard: 57.498%
+2019-03-12 19:45:22,105 INFO Epoch [15/44], Step [60/5437], Loss: 0.0126, Accuracy: 47.695%, Jaccard: 46.821%
+2019-03-12 19:45:22,807 INFO Epoch [15/44], Step [61/5437], Loss: 0.0326, Accuracy: 50.948%, Jaccard: 47.200%
+2019-03-12 19:45:23,503 INFO Epoch [15/44], Step [62/5437], Loss: 0.0017, Accuracy: 82.983%, Jaccard: 82.197%
+2019-03-12 19:45:24,208 INFO Epoch [15/44], Step [63/5437], Loss: 0.0161, Accuracy: 70.127%, Jaccard: 68.669%
+2019-03-12 19:45:24,921 INFO Epoch [15/44], Step [64/5437], Loss: 0.0083, Accuracy: 47.130%, Jaccard: 44.856%
+2019-03-12 19:45:25,623 INFO Epoch [15/44], Step [65/5437], Loss: 0.0160, Accuracy: 55.112%, Jaccard: 52.651%
+2019-03-12 19:45:26,323 INFO Epoch [15/44], Step [66/5437], Loss: 0.0042, Accuracy: 81.528%, Jaccard: 79.667%
+2019-03-12 19:45:27,022 INFO Epoch [15/44], Step [67/5437], Loss: 0.0251, Accuracy: 54.415%, Jaccard: 50.981%
+2019-03-12 19:45:27,723 INFO Epoch [15/44], Step [68/5437], Loss: 0.0172, Accuracy: 46.781%, Jaccard: 46.258%
+2019-03-12 19:45:28,425 INFO Epoch [15/44], Step [69/5437], Loss: 0.0248, Accuracy: 49.644%, Jaccard: 48.458%
+2019-03-12 19:45:29,124 INFO Epoch [15/44], Step [70/5437], Loss: 0.0082, Accuracy: 62.900%, Jaccard: 60.001%
+2019-03-12 19:45:29,834 INFO Epoch [15/44], Step [71/5437], Loss: 0.0618, Accuracy: 29.735%, Jaccard: 29.553%
+2019-03-12 19:45:30,532 INFO Epoch [15/44], Step [72/5437], Loss: 0.0071, Accuracy: 71.681%, Jaccard: 70.603%
+2019-03-12 19:45:31,236 INFO Epoch [15/44], Step [73/5437], Loss: 0.0043, Accuracy: 41.942%, Jaccard: 41.363%
+2019-03-12 19:45:31,939 INFO Epoch [15/44], Step [74/5437], Loss: 0.0107, Accuracy: 58.837%, Jaccard: 57.208%
+2019-03-12 19:45:32,641 INFO Epoch [15/44], Step [75/5437], Loss: 0.0159, Accuracy: 49.736%, Jaccard: 49.396%
+2019-03-12 19:45:33,344 INFO Epoch [15/44], Step [76/5437], Loss: 0.0032, Accuracy: 86.378%, Jaccard: 85.862%
+2019-03-12 19:45:34,045 INFO Epoch [15/44], Step [77/5437], Loss: 0.0016, Accuracy: 82.633%, Jaccard: 82.159%
+2019-03-12 19:45:34,744 INFO Epoch [15/44], Step [78/5437], Loss: 0.0092, Accuracy: 51.624%, Jaccard: 51.262%
+2019-03-12 19:45:35,445 INFO Epoch [15/44], Step [79/5437], Loss: 0.0139, Accuracy: 65.842%, Jaccard: 64.509%
+2019-03-12 19:45:36,153 INFO Epoch [15/44], Step [80/5437], Loss: 0.0138, Accuracy: 39.042%, Jaccard: 38.797%
+2019-03-12 19:45:36,855 INFO Epoch [15/44], Step [81/5437], Loss: 0.0074, Accuracy: 56.464%, Jaccard: 56.204%
+2019-03-12 19:45:37,557 INFO Epoch [15/44], Step [82/5437], Loss: 0.0039, Accuracy: 69.187%, Jaccard: 68.678%
+2019-03-12 19:45:38,256 INFO Epoch [15/44], Step [83/5437], Loss: 0.0011, Accuracy: 99.424%, Jaccard: 99.109%
+2019-03-12 19:45:38,962 INFO Epoch [15/44], Step [84/5437], Loss: 0.0259, Accuracy: 42.374%, Jaccard: 41.777%
+2019-03-12 19:45:39,656 INFO Epoch [15/44], Step [85/5437], Loss: 0.0035, Accuracy: 82.594%, Jaccard: 81.743%
+2019-03-12 19:45:40,362 INFO Epoch [15/44], Step [86/5437], Loss: 0.0259, Accuracy: 50.308%, Jaccard: 46.211%
+2019-03-12 19:45:41,064 INFO Epoch [15/44], Step [87/5437], Loss: 0.0030, Accuracy: 82.728%, Jaccard: 82.259%
+2019-03-12 19:45:41,762 INFO Epoch [15/44], Step [88/5437], Loss: 0.0141, Accuracy: 65.079%, Jaccard: 63.420%
+2019-03-12 19:45:42,468 INFO Epoch [15/44], Step [89/5437], Loss: 0.0321, Accuracy: 72.139%, Jaccard: 71.562%
+2019-03-12 19:45:43,172 INFO Epoch [15/44], Step [90/5437], Loss: 0.0019, Accuracy: 99.379%, Jaccard: 98.259%
+2019-03-12 19:45:43,879 INFO Epoch [15/44], Step [91/5437], Loss: 0.0452, Accuracy: 45.826%, Jaccard: 44.713%
+2019-03-12 19:45:44,580 INFO Epoch [15/44], Step [92/5437], Loss: 0.0095, Accuracy: 67.929%, Jaccard: 64.255%
+2019-03-12 19:45:45,287 INFO Epoch [15/44], Step [93/5437], Loss: 0.0107, Accuracy: 51.638%, Jaccard: 49.989%
+2019-03-12 19:45:45,988 INFO Epoch [15/44], Step [94/5437], Loss: 0.0071, Accuracy: 43.399%, Jaccard: 42.340%
+2019-03-12 19:45:46,688 INFO Epoch [15/44], Step [95/5437], Loss: 0.0426, Accuracy: 38.282%, Jaccard: 36.863%
+2019-03-12 19:45:47,391 INFO Epoch [15/44], Step [96/5437], Loss: 0.0023, Accuracy: 99.337%, Jaccard: 98.747%
+2019-03-12 19:45:48,088 INFO Epoch [15/44], Step [97/5437], Loss: 0.0385, Accuracy: 40.400%, Jaccard: 39.765%
+2019-03-12 19:45:48,789 INFO Epoch [15/44], Step [98/5437], Loss: 0.0257, Accuracy: 61.153%, Jaccard: 54.437%
+2019-03-12 19:45:49,490 INFO Epoch [15/44], Step [99/5437], Loss: 0.0045, Accuracy: 69.376%, Jaccard: 68.779%
+2019-03-12 19:45:50,200 INFO Epoch [15/44], Step [100/5437], Loss: 0.0102, Accuracy: 59.391%, Jaccard: 58.727%
+2019-03-12 19:45:50,908 INFO Epoch [15/44], Step [101/5437], Loss: 0.0072, Accuracy: 73.636%, Jaccard: 72.545%
+2019-03-12 19:45:51,610 INFO Epoch [15/44], Step [102/5437], Loss: 0.0083, Accuracy: 72.992%, Jaccard: 71.015%
+2019-03-12 19:45:52,313 INFO Epoch [15/44], Step [103/5437], Loss: 0.0040, Accuracy: 69.758%, Jaccard: 68.393%
+2019-03-12 19:45:53,016 INFO Epoch [15/44], Step [104/5437], Loss: 0.0074, Accuracy: 68.210%, Jaccard: 67.424%
+2019-03-12 19:45:53,717 INFO Epoch [15/44], Step [105/5437], Loss: 0.0838, Accuracy: 38.932%, Jaccard: 38.178%
+2019-03-12 19:45:54,425 INFO Epoch [15/44], Step [106/5437], Loss: 0.0449, Accuracy: 47.117%, Jaccard: 44.176%
+2019-03-12 19:45:55,125 INFO Epoch [15/44], Step [107/5437], Loss: 0.0133, Accuracy: 58.254%, Jaccard: 56.318%
+2019-03-12 19:45:55,828 INFO Epoch [15/44], Step [108/5437], Loss: 0.0064, Accuracy: 38.498%, Jaccard: 37.869%
+2019-03-12 19:45:56,529 INFO Epoch [15/44], Step [109/5437], Loss: 0.0119, Accuracy: 41.534%, Jaccard: 40.733%
+2019-03-12 19:45:57,232 INFO Epoch [15/44], Step [110/5437], Loss: 0.0487, Accuracy: 48.500%, Jaccard: 48.187%
+2019-03-12 19:45:57,936 INFO Epoch [15/44], Step [111/5437], Loss: 0.0219, Accuracy: 38.400%, Jaccard: 36.776%
+2019-03-12 19:45:58,643 INFO Epoch [15/44], Step [112/5437], Loss: 0.0055, Accuracy: 86.696%, Jaccard: 85.148%
+2019-03-12 19:45:59,345 INFO Epoch [15/44], Step [113/5437], Loss: 0.0084, Accuracy: 56.632%, Jaccard: 55.648%
+2019-03-12 19:46:00,046 INFO Epoch [15/44], Step [114/5437], Loss: 0.0071, Accuracy: 61.275%, Jaccard: 60.569%
+2019-03-12 19:46:00,749 INFO Epoch [15/44], Step [115/5437], Loss: 0.0107, Accuracy: 55.862%, Jaccard: 51.669%
+2019-03-12 19:46:01,459 INFO Epoch [15/44], Step [116/5437], Loss: 0.0205, Accuracy: 48.419%, Jaccard: 47.696%
+2019-03-12 19:46:02,159 INFO Epoch [15/44], Step [117/5437], Loss: 0.0056, Accuracy: 53.811%, Jaccard: 53.202%
+2019-03-12 19:46:02,867 INFO Epoch [15/44], Step [118/5437], Loss: 0.0038, Accuracy: 63.116%, Jaccard: 62.401%
+2019-03-12 19:46:03,567 INFO Epoch [15/44], Step [119/5437], Loss: 0.0314, Accuracy: 63.116%, Jaccard: 62.547%
+2019-03-12 19:46:04,265 INFO Epoch [15/44], Step [120/5437], Loss: 0.0231, Accuracy: 38.087%, Jaccard: 37.687%
+2019-03-12 19:46:04,966 INFO Epoch [15/44], Step [121/5437], Loss: 0.0287, Accuracy: 51.108%, Jaccard: 45.442%
+2019-03-12 19:46:05,671 INFO Epoch [15/44], Step [122/5437], Loss: 0.0128, Accuracy: 41.978%, Jaccard: 41.570%
+2019-03-12 19:46:06,369 INFO Epoch [15/44], Step [123/5437], Loss: 0.0794, Accuracy: 29.247%, Jaccard: 28.400%
+2019-03-12 19:46:07,069 INFO Epoch [15/44], Step [124/5437], Loss: 0.0071, Accuracy: 36.710%, Jaccard: 36.528%
+2019-03-12 19:46:07,772 INFO Epoch [15/44], Step [125/5437], Loss: 0.0423, Accuracy: 41.610%, Jaccard: 38.740%
+2019-03-12 19:46:08,473 INFO Epoch [15/44], Step [126/5437], Loss: 0.0120, Accuracy: 64.651%, Jaccard: 63.657%
+2019-03-12 19:46:09,179 INFO Epoch [15/44], Step [127/5437], Loss: 0.0172, Accuracy: 68.886%, Jaccard: 67.937%
+2019-03-12 19:46:09,891 INFO Epoch [15/44], Step [128/5437], Loss: 0.0072, Accuracy: 78.074%, Jaccard: 76.838%
+2019-03-12 19:46:10,589 INFO Epoch [15/44], Step [129/5437], Loss: 0.0269, Accuracy: 51.714%, Jaccard: 47.919%
+2019-03-12 19:46:11,288 INFO Epoch [15/44], Step [130/5437], Loss: 0.0035, Accuracy: 84.714%, Jaccard: 83.973%
+2019-03-12 19:46:11,992 INFO Epoch [15/44], Step [131/5437], Loss: 0.0054, Accuracy: 62.389%, Jaccard: 61.745%
+2019-03-12 19:46:12,696 INFO Epoch [15/44], Step [132/5437], Loss: 0.0047, Accuracy: 69.836%, Jaccard: 69.425%
+2019-03-12 19:46:13,397 INFO Epoch [15/44], Step [133/5437], Loss: 0.0562, Accuracy: 60.772%, Jaccard: 54.213%
+2019-03-12 19:46:14,099 INFO Epoch [15/44], Step [134/5437], Loss: 0.0047, Accuracy: 86.340%, Jaccard: 85.688%
+2019-03-12 19:46:14,800 INFO Epoch [15/44], Step [135/5437], Loss: 0.0060, Accuracy: 98.111%, Jaccard: 96.384%
+2019-03-12 19:46:15,502 INFO Epoch [15/44], Step [136/5437], Loss: 0.0153, Accuracy: 73.669%, Jaccard: 72.935%
+2019-03-12 19:46:16,202 INFO Epoch [15/44], Step [137/5437], Loss: 0.0433, Accuracy: 54.968%, Jaccard: 53.915%
+2019-03-12 19:46:16,914 INFO Epoch [15/44], Step [138/5437], Loss: 0.0057, Accuracy: 80.000%, Jaccard: 77.756%
+2019-03-12 19:46:17,614 INFO Epoch [15/44], Step [139/5437], Loss: 0.0513, Accuracy: 38.197%, Jaccard: 37.969%
+2019-03-12 19:46:18,316 INFO Epoch [15/44], Step [140/5437], Loss: 0.0090, Accuracy: 55.784%, Jaccard: 50.237%
+2019-03-12 19:46:19,017 INFO Epoch [15/44], Step [141/5437], Loss: 0.0032, Accuracy: 99.060%, Jaccard: 98.403%
+2019-03-12 19:46:19,718 INFO Epoch [15/44], Step [142/5437], Loss: 0.0024, Accuracy: 49.524%, Jaccard: 49.245%
+2019-03-12 19:46:20,422 INFO Epoch [15/44], Step [143/5437], Loss: 0.0031, Accuracy: 76.880%, Jaccard: 76.400%
+2019-03-12 19:46:21,133 INFO Epoch [15/44], Step [144/5437], Loss: 0.0083, Accuracy: 68.342%, Jaccard: 66.778%
+2019-03-12 19:46:21,837 INFO Epoch [15/44], Step [145/5437], Loss: 0.0069, Accuracy: 87.430%, Jaccard: 86.610%
+2019-03-12 19:46:22,541 INFO Epoch [15/44], Step [146/5437], Loss: 0.0718, Accuracy: 45.014%, Jaccard: 39.494%
+2019-03-12 19:46:23,242 INFO Epoch [15/44], Step [147/5437], Loss: 0.0285, Accuracy: 47.595%, Jaccard: 46.401%
+2019-03-12 19:46:23,944 INFO Epoch [15/44], Step [148/5437], Loss: 0.0163, Accuracy: 54.200%, Jaccard: 53.563%
+2019-03-12 19:46:24,645 INFO Epoch [15/44], Step [149/5437], Loss: 0.0702, Accuracy: 24.594%, Jaccard: 24.223%
+2019-03-12 19:46:25,346 INFO Epoch [15/44], Step [150/5437], Loss: 0.0091, Accuracy: 46.557%, Jaccard: 46.420%
+2019-03-12 19:46:26,049 INFO Epoch [15/44], Step [151/5437], Loss: 0.0091, Accuracy: 70.843%, Jaccard: 68.906%
+2019-03-12 19:46:26,766 INFO Epoch [15/44], Step [152/5437], Loss: 0.0109, Accuracy: 66.431%, Jaccard: 64.493%
+2019-03-12 19:46:27,469 INFO Epoch [15/44], Step [153/5437], Loss: 0.0121, Accuracy: 85.975%, Jaccard: 78.022%
+2019-03-12 19:46:28,175 INFO Epoch [15/44], Step [154/5437], Loss: 0.0101, Accuracy: 69.701%, Jaccard: 69.397%
+2019-03-12 19:46:28,878 INFO Epoch [15/44], Step [155/5437], Loss: 0.0322, Accuracy: 42.696%, Jaccard: 42.262%
+2019-03-12 19:46:29,583 INFO Epoch [15/44], Step [156/5437], Loss: 0.0266, Accuracy: 50.196%, Jaccard: 49.763%
+2019-03-12 19:46:30,289 INFO Epoch [15/44], Step [157/5437], Loss: 0.0069, Accuracy: 67.682%, Jaccard: 67.372%
+2019-03-12 19:46:30,993 INFO Epoch [15/44], Step [158/5437], Loss: 0.0018, Accuracy: 98.945%, Jaccard: 97.172%
+2019-03-12 19:46:31,694 INFO Epoch [15/44], Step [159/5437], Loss: 0.0022, Accuracy: 99.204%, Jaccard: 98.661%
+2019-03-12 19:46:32,400 INFO Epoch [15/44], Step [160/5437], Loss: 0.0031, Accuracy: 97.793%, Jaccard: 96.705%
+2019-03-12 19:46:33,106 INFO Epoch [15/44], Step [161/5437], Loss: 0.0268, Accuracy: 76.804%, Jaccard: 76.066%
+2019-03-12 19:46:33,806 INFO Epoch [15/44], Step [162/5437], Loss: 0.0034, Accuracy: 98.795%, Jaccard: 97.813%
+2019-03-12 19:46:34,509 INFO Epoch [15/44], Step [163/5437], Loss: 0.0353, Accuracy: 38.331%, Jaccard: 37.844%
+2019-03-12 19:46:35,215 INFO Epoch [15/44], Step [164/5437], Loss: 0.0053, Accuracy: 56.382%, Jaccard: 55.472%
+2019-03-12 19:46:35,919 INFO Epoch [15/44], Step [165/5437], Loss: 0.0196, Accuracy: 42.164%, Jaccard: 36.569%
+2019-03-12 19:46:36,619 INFO Epoch [15/44], Step [166/5437], Loss: 0.0027, Accuracy: 39.499%, Jaccard: 39.291%
+2019-03-12 19:46:37,319 INFO Epoch [15/44], Step [167/5437], Loss: 0.0231, Accuracy: 49.471%, Jaccard: 48.956%
+2019-03-12 19:46:38,020 INFO Epoch [15/44], Step [168/5437], Loss: 0.0155, Accuracy: 65.932%, Jaccard: 64.382%
+2019-03-12 19:46:38,738 INFO Epoch [15/44], Step [169/5437], Loss: 0.0287, Accuracy: 55.915%, Jaccard: 55.147%
+2019-03-12 19:46:39,449 INFO Epoch [15/44], Step [170/5437], Loss: 0.0123, Accuracy: 68.537%, Jaccard: 66.108%
+2019-03-12 19:46:40,157 INFO Epoch [15/44], Step [171/5437], Loss: 0.0446, Accuracy: 49.896%, Jaccard: 45.137%
+2019-03-12 19:46:40,861 INFO Epoch [15/44], Step [172/5437], Loss: 0.0228, Accuracy: 41.357%, Jaccard: 40.008%
+2019-03-12 19:46:41,565 INFO Epoch [15/44], Step [173/5437], Loss: 0.0153, Accuracy: 49.929%, Jaccard: 49.251%
+2019-03-12 19:46:42,267 INFO Epoch [15/44], Step [174/5437], Loss: 0.0011, Accuracy: 97.698%, Jaccard: 96.594%
+2019-03-12 19:46:42,968 INFO Epoch [15/44], Step [175/5437], Loss: 0.0051, Accuracy: 63.044%, Jaccard: 62.557%
+2019-03-12 19:46:43,673 INFO Epoch [15/44], Step [176/5437], Loss: 0.0057, Accuracy: 82.007%, Jaccard: 81.327%
+2019-03-12 19:46:44,377 INFO Epoch [15/44], Step [177/5437], Loss: 0.0211, Accuracy: 56.482%, Jaccard: 53.657%
+2019-03-12 19:46:45,081 INFO Epoch [15/44], Step [178/5437], Loss: 0.0042, Accuracy: 82.734%, Jaccard: 81.947%
+2019-03-12 19:46:45,785 INFO Epoch [15/44], Step [179/5437], Loss: 0.0204, Accuracy: 67.440%, Jaccard: 66.035%
+2019-03-12 19:46:46,496 INFO Epoch [15/44], Step [180/5437], Loss: 0.0077, Accuracy: 75.468%, Jaccard: 74.049%
+2019-03-12 19:46:47,201 INFO Epoch [15/44], Step [181/5437], Loss: 0.0022, Accuracy: 84.516%, Jaccard: 83.587%
+2019-03-12 19:46:47,911 INFO Epoch [15/44], Step [182/5437], Loss: 0.0212, Accuracy: 48.481%, Jaccard: 47.906%
+2019-03-12 19:46:48,612 INFO Epoch [15/44], Step [183/5437], Loss: 0.0206, Accuracy: 37.053%, Jaccard: 36.042%
+2019-03-12 19:46:49,315 INFO Epoch [15/44], Step [184/5437], Loss: 0.0174, Accuracy: 59.753%, Jaccard: 59.121%
+2019-03-12 19:46:50,021 INFO Epoch [15/44], Step [185/5437], Loss: 0.0187, Accuracy: 47.731%, Jaccard: 44.049%
+2019-03-12 19:46:50,735 INFO Epoch [15/44], Step [186/5437], Loss: 0.0140, Accuracy: 71.929%, Jaccard: 71.545%
+2019-03-12 19:46:51,438 INFO Epoch [15/44], Step [187/5437], Loss: 0.0040, Accuracy: 97.286%, Jaccard: 95.445%
+2019-03-12 19:46:52,147 INFO Epoch [15/44], Step [188/5437], Loss: 0.0159, Accuracy: 71.765%, Jaccard: 69.120%
+2019-03-12 19:46:52,864 INFO Epoch [15/44], Step [189/5437], Loss: 0.0712, Accuracy: 37.572%, Jaccard: 33.441%
+2019-03-12 19:46:53,570 INFO Epoch [15/44], Step [190/5437], Loss: 0.0023, Accuracy: 99.000%, Jaccard: 97.913%
+2019-03-12 19:46:54,277 INFO Epoch [15/44], Step [191/5437], Loss: 0.0020, Accuracy: 99.057%, Jaccard: 98.418%
+2019-03-12 19:46:54,978 INFO Epoch [15/44], Step [192/5437], Loss: 0.0311, Accuracy: 48.018%, Jaccard: 44.873%
+2019-03-12 19:46:55,678 INFO Epoch [15/44], Step [193/5437], Loss: 0.0140, Accuracy: 59.115%, Jaccard: 55.088%
+2019-03-12 19:46:56,380 INFO Epoch [15/44], Step [194/5437], Loss: 0.0066, Accuracy: 80.082%, Jaccard: 78.345%
+2019-03-12 19:46:57,083 INFO Epoch [15/44], Step [195/5437], Loss: 0.0032, Accuracy: 98.453%, Jaccard: 96.501%
+2019-03-12 19:46:57,792 INFO Epoch [15/44], Step [196/5437], Loss: 0.0129, Accuracy: 66.945%, Jaccard: 64.999%
+2019-03-12 19:46:58,494 INFO Epoch [15/44], Step [197/5437], Loss: 0.0204, Accuracy: 51.033%, Jaccard: 48.244%
+2019-03-12 19:46:59,194 INFO Epoch [15/44], Step [198/5437], Loss: 0.0040, Accuracy: 98.251%, Jaccard: 95.987%
+2019-03-12 19:46:59,898 INFO Epoch [15/44], Step [199/5437], Loss: 0.0141, Accuracy: 58.696%, Jaccard: 57.868%
+2019-03-12 19:47:00,600 INFO Epoch [15/44], Step [200/5437], Loss: 0.0449, Accuracy: 54.768%, Jaccard: 49.602%
+2019-03-12 19:47:01,301 INFO Epoch [15/44], Step [201/5437], Loss: 0.0008, Accuracy: 99.653%, Jaccard: 99.268%
+2019-03-12 19:47:02,010 INFO Epoch [15/44], Step [202/5437], Loss: 0.0193, Accuracy: 76.729%, Jaccard: 73.320%
+2019-03-12 19:47:02,713 INFO Epoch [15/44], Step [203/5437], Loss: 0.0103, Accuracy: 55.241%, Jaccard: 52.023%
+2019-03-12 19:47:03,420 INFO Epoch [15/44], Step [204/5437], Loss: 0.0091, Accuracy: 78.370%, Jaccard: 77.873%
+2019-03-12 19:47:04,123 INFO Epoch [15/44], Step [205/5437], Loss: 0.0028, Accuracy: 82.906%, Jaccard: 82.414%
+2019-03-12 19:47:04,828 INFO Epoch [15/44], Step [206/5437], Loss: 0.0050, Accuracy: 47.933%, Jaccard: 47.127%
+2019-03-12 19:47:05,533 INFO Epoch [15/44], Step [207/5437], Loss: 0.1042, Accuracy: 15.892%, Jaccard: 15.733%
+2019-03-12 19:47:06,240 INFO Epoch [15/44], Step [208/5437], Loss: 0.0038, Accuracy: 98.188%, Jaccard: 96.848%
+2019-03-12 19:47:06,942 INFO Epoch [15/44], Step [209/5437], Loss: 0.0065, Accuracy: 58.152%, Jaccard: 57.371%
+2019-03-12 19:47:07,643 INFO Epoch [15/44], Step [210/5437], Loss: 0.0229, Accuracy: 67.261%, Jaccard: 67.080%
+2019-03-12 19:47:08,343 INFO Epoch [15/44], Step [211/5437], Loss: 0.0155, Accuracy: 56.135%, Jaccard: 55.702%
+2019-03-12 19:47:09,053 INFO Epoch [15/44], Step [212/5437], Loss: 0.0419, Accuracy: 56.516%, Jaccard: 51.210%
+2019-03-12 19:47:09,756 INFO Epoch [15/44], Step [213/5437], Loss: 0.0106, Accuracy: 58.058%, Jaccard: 56.108%
+2019-03-12 19:47:10,455 INFO Epoch [15/44], Step [214/5437], Loss: 0.0066, Accuracy: 76.089%, Jaccard: 73.116%
+2019-03-12 19:47:11,159 INFO Epoch [15/44], Step [215/5437], Loss: 0.0095, Accuracy: 60.234%, Jaccard: 59.411%
+2019-03-12 19:47:11,861 INFO Epoch [15/44], Step [216/5437], Loss: 0.0134, Accuracy: 61.993%, Jaccard: 61.278%
+2019-03-12 19:47:12,566 INFO Epoch [15/44], Step [217/5437], Loss: 0.0150, Accuracy: 55.669%, Jaccard: 54.943%
+2019-03-12 19:47:13,277 INFO Epoch [15/44], Step [218/5437], Loss: 0.0478, Accuracy: 41.742%, Jaccard: 41.443%
+2019-03-12 19:47:13,982 INFO Epoch [15/44], Step [219/5437], Loss: 0.0037, Accuracy: 82.158%, Jaccard: 80.248%
+2019-03-12 19:47:14,687 INFO Epoch [15/44], Step [220/5437], Loss: 0.0046, Accuracy: 68.136%, Jaccard: 67.254%
+2019-03-12 19:47:15,394 INFO Epoch [15/44], Step [221/5437], Loss: 0.0468, Accuracy: 48.895%, Jaccard: 48.074%
+2019-03-12 19:47:16,094 INFO Epoch [15/44], Step [222/5437], Loss: 0.0084, Accuracy: 48.085%, Jaccard: 47.240%
+2019-03-12 19:47:16,795 INFO Epoch [15/44], Step [223/5437], Loss: 0.0022, Accuracy: 99.150%, Jaccard: 98.281%
+2019-03-12 19:47:17,502 INFO Epoch [15/44], Step [224/5437], Loss: 0.0114, Accuracy: 38.629%, Jaccard: 38.373%
+2019-03-12 19:47:18,201 INFO Epoch [15/44], Step [225/5437], Loss: 0.0130, Accuracy: 63.688%, Jaccard: 61.606%
+2019-03-12 19:47:18,903 INFO Epoch [15/44], Step [226/5437], Loss: 0.0142, Accuracy: 75.952%, Jaccard: 75.395%
+2019-03-12 19:47:19,607 INFO Epoch [15/44], Step [227/5437], Loss: 0.0145, Accuracy: 43.824%, Jaccard: 42.906%
+2019-03-12 19:47:20,312 INFO Epoch [15/44], Step [228/5437], Loss: 0.0032, Accuracy: 70.062%, Jaccard: 69.359%
+2019-03-12 19:47:21,019 INFO Epoch [15/44], Step [229/5437], Loss: 0.0465, Accuracy: 59.500%, Jaccard: 53.630%
+2019-03-12 19:47:21,718 INFO Epoch [15/44], Step [230/5437], Loss: 0.0589, Accuracy: 31.539%, Jaccard: 27.739%
+2019-03-12 19:47:22,419 INFO Epoch [15/44], Step [231/5437], Loss: 0.0050, Accuracy: 74.423%, Jaccard: 73.908%
+2019-03-12 19:47:23,118 INFO Epoch [15/44], Step [232/5437], Loss: 0.0195, Accuracy: 65.015%, Jaccard: 64.523%
+2019-03-12 19:47:23,822 INFO Epoch [15/44], Step [233/5437], Loss: 0.0209, Accuracy: 49.809%, Jaccard: 49.004%
+2019-03-12 19:47:24,526 INFO Epoch [15/44], Step [234/5437], Loss: 0.0114, Accuracy: 66.665%, Jaccard: 63.839%
+2019-03-12 19:47:25,227 INFO Epoch [15/44], Step [235/5437], Loss: 0.0482, Accuracy: 51.474%, Jaccard: 45.490%
+2019-03-12 19:47:25,927 INFO Epoch [15/44], Step [236/5437], Loss: 0.0052, Accuracy: 98.031%, Jaccard: 96.354%
+2019-03-12 19:47:26,630 INFO Epoch [15/44], Step [237/5437], Loss: 0.0294, Accuracy: 52.051%, Jaccard: 51.383%
+2019-03-12 19:47:27,335 INFO Epoch [15/44], Step [238/5437], Loss: 0.0098, Accuracy: 79.748%, Jaccard: 78.799%
+2019-03-12 19:47:28,038 INFO Epoch [15/44], Step [239/5437], Loss: 0.0031, Accuracy: 97.993%, Jaccard: 96.899%
+2019-03-12 19:47:28,745 INFO Epoch [15/44], Step [240/5437], Loss: 0.0089, Accuracy: 72.994%, Jaccard: 72.202%
+2019-03-12 19:47:29,447 INFO Epoch [15/44], Step [241/5437], Loss: 0.0236, Accuracy: 56.244%, Jaccard: 53.843%
+2019-03-12 19:47:30,147 INFO Epoch [15/44], Step [242/5437], Loss: 0.0138, Accuracy: 53.771%, Jaccard: 48.860%
+2019-03-12 19:47:30,849 INFO Epoch [15/44], Step [243/5437], Loss: 0.0055, Accuracy: 44.126%, Jaccard: 43.293%
+2019-03-12 19:47:31,555 INFO Epoch [15/44], Step [244/5437], Loss: 0.0019, Accuracy: 84.741%, Jaccard: 83.898%
+2019-03-12 19:47:32,257 INFO Epoch [15/44], Step [245/5437], Loss: 0.0211, Accuracy: 47.230%, Jaccard: 41.585%
+2019-03-12 19:47:32,958 INFO Epoch [15/44], Step [246/5437], Loss: 0.0727, Accuracy: 71.434%, Jaccard: 64.508%
+2019-03-12 19:47:33,659 INFO Epoch [15/44], Step [247/5437], Loss: 0.0243, Accuracy: 43.241%, Jaccard: 42.791%
+2019-03-12 19:47:34,359 INFO Epoch [15/44], Step [248/5437], Loss: 0.0619, Accuracy: 66.233%, Jaccard: 63.851%
+2019-03-12 19:47:35,061 INFO Epoch [15/44], Step [249/5437], Loss: 0.0479, Accuracy: 47.873%, Jaccard: 47.696%
+2019-03-12 19:47:35,769 INFO Epoch [15/44], Step [250/5437], Loss: 0.0144, Accuracy: 53.289%, Jaccard: 51.960%
+2019-03-12 19:47:36,476 INFO Epoch [15/44], Step [251/5437], Loss: 0.0026, Accuracy: 98.726%, Jaccard: 96.926%
+2019-03-12 19:47:37,175 INFO Epoch [15/44], Step [252/5437], Loss: 0.0058, Accuracy: 72.192%, Jaccard: 71.497%
+2019-03-12 19:47:37,877 INFO Epoch [15/44], Step [253/5437], Loss: 0.0048, Accuracy: 62.748%, Jaccard: 61.937%
+2019-03-12 19:47:38,578 INFO Epoch [15/44], Step [254/5437], Loss: 0.0157, Accuracy: 54.523%, Jaccard: 53.072%
+2019-03-12 19:47:39,278 INFO Epoch [15/44], Step [255/5437], Loss: 0.0122, Accuracy: 58.897%, Jaccard: 58.460%
+2019-03-12 19:47:39,989 INFO Epoch [15/44], Step [256/5437], Loss: 0.0420, Accuracy: 63.701%, Jaccard: 63.099%
+2019-03-12 19:47:40,691 INFO Epoch [15/44], Step [257/5437], Loss: 0.0317, Accuracy: 43.639%, Jaccard: 43.488%
+2019-03-12 19:47:41,396 INFO Epoch [15/44], Step [258/5437], Loss: 0.0066, Accuracy: 74.253%, Jaccard: 72.973%
+2019-03-12 19:47:42,097 INFO Epoch [15/44], Step [259/5437], Loss: 0.0536, Accuracy: 66.021%, Jaccard: 63.110%
+2019-03-12 19:47:42,806 INFO Epoch [15/44], Step [260/5437], Loss: 0.0084, Accuracy: 58.490%, Jaccard: 57.145%
+2019-03-12 19:47:43,509 INFO Epoch [15/44], Step [261/5437], Loss: 0.0264, Accuracy: 29.955%, Jaccard: 26.915%
+2019-03-12 19:47:44,209 INFO Epoch [15/44], Step [262/5437], Loss: 0.0192, Accuracy: 45.009%, Jaccard: 44.332%
+2019-03-12 19:47:44,913 INFO Epoch [15/44], Step [263/5437], Loss: 0.0058, Accuracy: 96.831%, Jaccard: 94.168%
+2019-03-12 19:47:45,614 INFO Epoch [15/44], Step [264/5437], Loss: 0.0056, Accuracy: 85.380%, Jaccard: 82.217%
+2019-03-12 19:47:46,317 INFO Epoch [15/44], Step [265/5437], Loss: 0.0066, Accuracy: 48.766%, Jaccard: 46.574%
+2019-03-12 19:47:47,022 INFO Epoch [15/44], Step [266/5437], Loss: 0.0060, Accuracy: 62.146%, Jaccard: 61.537%
+2019-03-12 19:47:47,728 INFO Epoch [15/44], Step [267/5437], Loss: 0.0025, Accuracy: 99.126%, Jaccard: 98.069%
+2019-03-12 19:47:48,432 INFO Epoch [15/44], Step [268/5437], Loss: 0.0059, Accuracy: 61.027%, Jaccard: 57.870%
+2019-03-12 19:47:49,140 INFO Epoch [15/44], Step [269/5437], Loss: 0.0268, Accuracy: 63.149%, Jaccard: 61.553%
+2019-03-12 19:47:49,851 INFO Epoch [15/44], Step [270/5437], Loss: 0.0051, Accuracy: 87.991%, Jaccard: 87.343%
+2019-03-12 19:47:50,555 INFO Epoch [15/44], Step [271/5437], Loss: 0.0208, Accuracy: 49.184%, Jaccard: 48.754%
+2019-03-12 19:47:51,265 INFO Epoch [15/44], Step [272/5437], Loss: 0.0062, Accuracy: 70.582%, Jaccard: 70.232%
+2019-03-12 19:47:51,970 INFO Epoch [15/44], Step [273/5437], Loss: 0.0259, Accuracy: 71.169%, Jaccard: 70.627%
+2019-03-12 19:47:52,673 INFO Epoch [15/44], Step [274/5437], Loss: 0.0045, Accuracy: 98.869%, Jaccard: 97.992%
+2019-03-12 19:47:53,379 INFO Epoch [15/44], Step [275/5437], Loss: 0.0026, Accuracy: 78.995%, Jaccard: 78.100%
+2019-03-12 19:47:54,086 INFO Epoch [15/44], Step [276/5437], Loss: 0.0029, Accuracy: 99.539%, Jaccard: 99.235%
+2019-03-12 19:47:54,790 INFO Epoch [15/44], Step [277/5437], Loss: 0.0023, Accuracy: 97.281%, Jaccard: 94.747%
+2019-03-12 19:47:55,493 INFO Epoch [15/44], Step [278/5437], Loss: 0.0117, Accuracy: 59.053%, Jaccard: 57.443%
+2019-03-12 19:47:56,194 INFO Epoch [15/44], Step [279/5437], Loss: 0.0066, Accuracy: 66.606%, Jaccard: 66.367%
+2019-03-12 19:47:56,909 INFO Epoch [15/44], Step [280/5437], Loss: 0.0020, Accuracy: 98.084%, Jaccard: 97.732%
+2019-03-12 19:47:57,610 INFO Epoch [15/44], Step [281/5437], Loss: 0.0147, Accuracy: 52.724%, Jaccard: 50.414%
+2019-03-12 19:47:58,315 INFO Epoch [15/44], Step [282/5437], Loss: 0.0021, Accuracy: 65.702%, Jaccard: 65.367%
+2019-03-12 19:47:59,015 INFO Epoch [15/44], Step [283/5437], Loss: 0.0255, Accuracy: 49.326%, Jaccard: 45.109%
+2019-03-12 19:47:59,717 INFO Epoch [15/44], Step [284/5437], Loss: 0.0047, Accuracy: 63.257%, Jaccard: 62.896%
+2019-03-12 19:48:00,425 INFO Epoch [15/44], Step [285/5437], Loss: 0.0135, Accuracy: 49.030%, Jaccard: 45.522%
+2019-03-12 19:48:01,132 INFO Epoch [15/44], Step [286/5437], Loss: 0.0135, Accuracy: 80.741%, Jaccard: 77.151%
+2019-03-12 19:48:01,836 INFO Epoch [15/44], Step [287/5437], Loss: 0.0086, Accuracy: 58.965%, Jaccard: 58.139%
+2019-03-12 19:48:02,545 INFO Epoch [15/44], Step [288/5437], Loss: 0.0059, Accuracy: 68.403%, Jaccard: 65.816%
+2019-03-12 19:48:03,252 INFO Epoch [15/44], Step [289/5437], Loss: 0.0084, Accuracy: 84.326%, Jaccard: 80.876%
+2019-03-12 19:48:03,958 INFO Epoch [15/44], Step [290/5437], Loss: 0.0070, Accuracy: 61.579%, Jaccard: 61.205%
+2019-03-12 19:48:04,661 INFO Epoch [15/44], Step [291/5437], Loss: 0.0200, Accuracy: 40.840%, Jaccard: 39.029%
+2019-03-12 19:48:05,367 INFO Epoch [15/44], Step [292/5437], Loss: 0.0020, Accuracy: 86.583%, Jaccard: 85.458%
+2019-03-12 19:48:06,068 INFO Epoch [15/44], Step [293/5437], Loss: 0.0107, Accuracy: 76.636%, Jaccard: 75.630%
+2019-03-12 19:48:06,773 INFO Epoch [15/44], Step [294/5437], Loss: 0.0017, Accuracy: 99.161%, Jaccard: 98.458%
+2019-03-12 19:48:07,477 INFO Epoch [15/44], Step [295/5437], Loss: 0.0047, Accuracy: 87.924%, Jaccard: 87.364%
+2019-03-12 19:48:08,175 INFO Epoch [15/44], Step [296/5437], Loss: 0.0039, Accuracy: 98.842%, Jaccard: 97.196%
+2019-03-12 19:48:08,884 INFO Epoch [15/44], Step [297/5437], Loss: 0.0020, Accuracy: 84.938%, Jaccard: 84.310%
+2019-03-12 19:48:09,593 INFO Epoch [15/44], Step [298/5437], Loss: 0.0514, Accuracy: 61.945%, Jaccard: 60.385%
+2019-03-12 19:48:10,298 INFO Epoch [15/44], Step [299/5437], Loss: 0.0166, Accuracy: 83.039%, Jaccard: 82.616%
+2019-03-12 19:48:11,000 INFO Epoch [15/44], Step [300/5437], Loss: 0.0042, Accuracy: 68.220%, Jaccard: 67.065%
+2019-03-12 19:48:11,873 INFO Epoch [15/44], Step [301/5437], Loss: 0.0074, Accuracy: 84.950%, Jaccard: 84.461%
+2019-03-12 19:48:12,582 INFO Epoch [15/44], Step [302/5437], Loss: 0.0159, Accuracy: 87.759%, Jaccard: 79.989%
+2019-03-12 19:48:13,291 INFO Epoch [15/44], Step [303/5437], Loss: 0.0035, Accuracy: 48.588%, Jaccard: 48.274%
+2019-03-12 19:48:13,991 INFO Epoch [15/44], Step [304/5437], Loss: 0.0093, Accuracy: 66.309%, Jaccard: 64.241%
+2019-03-12 19:48:14,692 INFO Epoch [15/44], Step [305/5437], Loss: 0.0100, Accuracy: 43.454%, Jaccard: 42.862%
+2019-03-12 19:48:15,398 INFO Epoch [15/44], Step [306/5437], Loss: 0.0152, Accuracy: 68.865%, Jaccard: 68.382%
+2019-03-12 19:48:16,098 INFO Epoch [15/44], Step [307/5437], Loss: 0.0372, Accuracy: 65.230%, Jaccard: 64.609%
+2019-03-12 19:48:16,806 INFO Epoch [15/44], Step [308/5437], Loss: 0.0033, Accuracy: 58.819%, Jaccard: 57.893%
+2019-03-12 19:48:17,505 INFO Epoch [15/44], Step [309/5437], Loss: 0.0080, Accuracy: 62.942%, Jaccard: 62.454%
+2019-03-12 19:48:18,204 INFO Epoch [15/44], Step [310/5437], Loss: 0.0487, Accuracy: 41.975%, Jaccard: 41.750%
+2019-03-12 19:48:18,909 INFO Epoch [15/44], Step [311/5437], Loss: 0.0068, Accuracy: 65.307%, Jaccard: 64.275%
+2019-03-12 19:48:19,613 INFO Epoch [15/44], Step [312/5437], Loss: 0.0047, Accuracy: 98.879%, Jaccard: 97.832%
+2019-03-12 19:48:20,316 INFO Epoch [15/44], Step [313/5437], Loss: 0.0381, Accuracy: 74.788%, Jaccard: 67.670%
+2019-03-12 19:48:21,030 INFO Epoch [15/44], Step [314/5437], Loss: 0.0155, Accuracy: 40.859%, Jaccard: 40.601%
+2019-03-12 19:48:21,730 INFO Epoch [15/44], Step [315/5437], Loss: 0.0046, Accuracy: 79.004%, Jaccard: 77.955%
+2019-03-12 19:48:22,431 INFO Epoch [15/44], Step [316/5437], Loss: 0.0269, Accuracy: 48.010%, Jaccard: 46.240%
+2019-03-12 19:48:23,133 INFO Epoch [15/44], Step [317/5437], Loss: 0.0038, Accuracy: 73.505%, Jaccard: 72.909%
+2019-03-12 19:48:23,843 INFO Epoch [15/44], Step [318/5437], Loss: 0.0123, Accuracy: 52.349%, Jaccard: 51.938%
+2019-03-12 19:48:24,545 INFO Epoch [15/44], Step [319/5437], Loss: 0.0027, Accuracy: 98.770%, Jaccard: 97.963%
+2019-03-12 19:48:25,254 INFO Epoch [15/44], Step [320/5437], Loss: 0.0133, Accuracy: 59.765%, Jaccard: 59.127%
+2019-03-12 19:48:25,958 INFO Epoch [15/44], Step [321/5437], Loss: 0.0111, Accuracy: 78.140%, Jaccard: 77.215%
+2019-03-12 19:48:26,662 INFO Epoch [15/44], Step [322/5437], Loss: 0.0050, Accuracy: 69.400%, Jaccard: 68.971%
+2019-03-12 19:48:27,364 INFO Epoch [15/44], Step [323/5437], Loss: 0.0097, Accuracy: 66.496%, Jaccard: 66.019%
+2019-03-12 19:48:28,072 INFO Epoch [15/44], Step [324/5437], Loss: 0.0023, Accuracy: 82.347%, Jaccard: 81.597%
+2019-03-12 19:48:28,774 INFO Epoch [15/44], Step [325/5437], Loss: 0.0085, Accuracy: 85.208%, Jaccard: 84.174%
+2019-03-12 19:48:29,477 INFO Epoch [15/44], Step [326/5437], Loss: 0.0232, Accuracy: 49.245%, Jaccard: 48.868%
+2019-03-12 19:48:30,182 INFO Epoch [15/44], Step [327/5437], Loss: 0.0048, Accuracy: 85.106%, Jaccard: 83.481%
+2019-03-12 19:48:30,886 INFO Epoch [15/44], Step [328/5437], Loss: 0.0088, Accuracy: 74.035%, Jaccard: 69.930%
+2019-03-12 19:48:31,586 INFO Epoch [15/44], Step [329/5437], Loss: 0.0386, Accuracy: 49.713%, Jaccard: 47.271%
+2019-03-12 19:48:32,295 INFO Epoch [15/44], Step [330/5437], Loss: 0.0081, Accuracy: 77.690%, Jaccard: 76.744%
+2019-03-12 19:48:33,005 INFO Epoch [15/44], Step [331/5437], Loss: 0.0041, Accuracy: 68.626%, Jaccard: 67.994%
+2019-03-12 19:48:33,706 INFO Epoch [15/44], Step [332/5437], Loss: 0.0045, Accuracy: 98.474%, Jaccard: 96.445%
+2019-03-12 19:48:34,410 INFO Epoch [15/44], Step [333/5437], Loss: 0.0241, Accuracy: 28.742%, Jaccard: 28.444%
+2019-03-12 19:48:35,114 INFO Epoch [15/44], Step [334/5437], Loss: 0.0044, Accuracy: 71.679%, Jaccard: 70.869%
+2019-03-12 19:48:35,816 INFO Epoch [15/44], Step [335/5437], Loss: 0.0034, Accuracy: 83.128%, Jaccard: 80.421%
+2019-03-12 19:48:36,522 INFO Epoch [15/44], Step [336/5437], Loss: 0.0022, Accuracy: 99.279%, Jaccard: 98.690%
+2019-03-12 19:48:37,228 INFO Epoch [15/44], Step [337/5437], Loss: 0.0012, Accuracy: 99.381%, Jaccard: 99.095%
+2019-03-12 19:48:37,929 INFO Epoch [15/44], Step [338/5437], Loss: 0.0031, Accuracy: 82.850%, Jaccard: 82.322%
+2019-03-12 19:48:38,631 INFO Epoch [15/44], Step [339/5437], Loss: 0.0119, Accuracy: 57.410%, Jaccard: 55.100%
+2019-03-12 19:48:39,345 INFO Epoch [15/44], Step [340/5437], Loss: 0.0081, Accuracy: 78.199%, Jaccard: 75.838%
+2019-03-12 19:48:40,046 INFO Epoch [15/44], Step [341/5437], Loss: 0.0017, Accuracy: 98.166%, Jaccard: 96.113%
+2019-03-12 19:48:40,750 INFO Epoch [15/44], Step [342/5437], Loss: 0.0043, Accuracy: 72.209%, Jaccard: 71.056%
+2019-03-12 19:48:41,454 INFO Epoch [15/44], Step [343/5437], Loss: 0.0007, Accuracy: 99.331%, Jaccard: 98.451%
+2019-03-12 19:48:42,159 INFO Epoch [15/44], Step [344/5437], Loss: 0.0126, Accuracy: 75.095%, Jaccard: 73.930%
+2019-03-12 19:48:42,861 INFO Epoch [15/44], Step [345/5437], Loss: 0.0018, Accuracy: 99.566%, Jaccard: 98.465%
+2019-03-12 19:48:43,569 INFO Epoch [15/44], Step [346/5437], Loss: 0.0234, Accuracy: 39.235%, Jaccard: 38.953%
+2019-03-12 19:48:44,273 INFO Epoch [15/44], Step [347/5437], Loss: 0.0017, Accuracy: 99.402%, Jaccard: 98.078%
+2019-03-12 19:48:44,978 INFO Epoch [15/44], Step [348/5437], Loss: 0.0059, Accuracy: 79.222%, Jaccard: 77.514%
+2019-03-12 19:48:45,678 INFO Epoch [15/44], Step [349/5437], Loss: 0.0806, Accuracy: 48.119%, Jaccard: 47.403%
+2019-03-12 19:48:46,380 INFO Epoch [15/44], Step [350/5437], Loss: 0.0038, Accuracy: 78.460%, Jaccard: 77.271%
+2019-03-12 19:48:47,085 INFO Epoch [15/44], Step [351/5437], Loss: 0.0109, Accuracy: 43.586%, Jaccard: 42.724%
+2019-03-12 19:48:47,795 INFO Epoch [15/44], Step [352/5437], Loss: 0.0457, Accuracy: 71.226%, Jaccard: 70.865%
+2019-03-12 19:48:48,495 INFO Epoch [15/44], Step [353/5437], Loss: 0.0098, Accuracy: 62.341%, Jaccard: 59.584%
+2019-03-12 19:48:49,195 INFO Epoch [15/44], Step [354/5437], Loss: 0.0075, Accuracy: 66.141%, Jaccard: 65.141%
+2019-03-12 19:48:49,897 INFO Epoch [15/44], Step [355/5437], Loss: 0.0029, Accuracy: 84.726%, Jaccard: 83.963%
+2019-03-12 19:48:50,600 INFO Epoch [15/44], Step [356/5437], Loss: 0.0281, Accuracy: 45.625%, Jaccard: 44.130%
+2019-03-12 19:48:51,305 INFO Epoch [15/44], Step [357/5437], Loss: 0.0123, Accuracy: 76.805%, Jaccard: 75.461%
+2019-03-12 19:48:52,007 INFO Epoch [15/44], Step [358/5437], Loss: 0.0028, Accuracy: 98.428%, Jaccard: 96.978%
+2019-03-12 19:48:52,708 INFO Epoch [15/44], Step [359/5437], Loss: 0.0376, Accuracy: 79.940%, Jaccard: 75.776%
+2019-03-12 19:48:53,412 INFO Epoch [15/44], Step [360/5437], Loss: 0.0032, Accuracy: 97.789%, Jaccard: 96.159%
+2019-03-12 19:48:54,117 INFO Epoch [15/44], Step [361/5437], Loss: 0.0057, Accuracy: 70.960%, Jaccard: 69.912%
+2019-03-12 19:48:54,825 INFO Epoch [15/44], Step [362/5437], Loss: 0.0508, Accuracy: 51.892%, Jaccard: 51.509%
+2019-03-12 19:48:55,529 INFO Epoch [15/44], Step [363/5437], Loss: 0.0062, Accuracy: 65.376%, Jaccard: 64.627%
+2019-03-12 19:48:56,234 INFO Epoch [15/44], Step [364/5437], Loss: 0.0142, Accuracy: 54.487%, Jaccard: 53.704%
+2019-03-12 19:48:56,936 INFO Epoch [15/44], Step [365/5437], Loss: 0.0039, Accuracy: 76.344%, Jaccard: 74.959%
+2019-03-12 19:48:57,636 INFO Epoch [15/44], Step [366/5437], Loss: 0.0028, Accuracy: 76.914%, Jaccard: 76.195%
+2019-03-12 19:48:58,336 INFO Epoch [15/44], Step [367/5437], Loss: 0.0019, Accuracy: 79.268%, Jaccard: 78.608%
+2019-03-12 19:48:59,044 INFO Epoch [15/44], Step [368/5437], Loss: 0.0019, Accuracy: 74.667%, Jaccard: 74.359%
+2019-03-12 19:48:59,748 INFO Epoch [15/44], Step [369/5437], Loss: 0.0008, Accuracy: 99.455%, Jaccard: 98.435%
+2019-03-12 19:49:00,457 INFO Epoch [15/44], Step [370/5437], Loss: 0.0065, Accuracy: 88.067%, Jaccard: 87.625%
+2019-03-12 19:49:01,157 INFO Epoch [15/44], Step [371/5437], Loss: 0.0154, Accuracy: 49.679%, Jaccard: 49.286%
+2019-03-12 19:49:01,866 INFO Epoch [15/44], Step [372/5437], Loss: 0.0006, Accuracy: 99.526%, Jaccard: 99.308%
+2019-03-12 19:49:02,573 INFO Epoch [15/44], Step [373/5437], Loss: 0.0222, Accuracy: 44.292%, Jaccard: 42.738%
+2019-03-12 19:49:03,277 INFO Epoch [15/44], Step [374/5437], Loss: 0.0489, Accuracy: 43.019%, Jaccard: 37.408%
+2019-03-12 19:49:03,977 INFO Epoch [15/44], Step [375/5437], Loss: 0.0041, Accuracy: 61.948%, Jaccard: 61.637%
+2019-03-12 19:49:04,679 INFO Epoch [15/44], Step [376/5437], Loss: 0.0070, Accuracy: 59.011%, Jaccard: 58.503%
+2019-03-12 19:49:05,380 INFO Epoch [15/44], Step [377/5437], Loss: 0.0561, Accuracy: 53.557%, Jaccard: 50.258%
+2019-03-12 19:49:06,088 INFO Epoch [15/44], Step [378/5437], Loss: 0.0044, Accuracy: 84.956%, Jaccard: 83.930%
+2019-03-12 19:49:06,792 INFO Epoch [15/44], Step [379/5437], Loss: 0.0130, Accuracy: 71.016%, Jaccard: 69.874%
+2019-03-12 19:49:07,500 INFO Epoch [15/44], Step [380/5437], Loss: 0.0082, Accuracy: 65.005%, Jaccard: 64.624%
+2019-03-12 19:49:08,201 INFO Epoch [15/44], Step [381/5437], Loss: 0.0010, Accuracy: 99.196%, Jaccard: 98.559%
+2019-03-12 19:49:08,906 INFO Epoch [15/44], Step [382/5437], Loss: 0.0472, Accuracy: 67.379%, Jaccard: 60.711%
+2019-03-12 19:49:09,613 INFO Epoch [15/44], Step [383/5437], Loss: 0.0042, Accuracy: 82.256%, Jaccard: 81.351%
+2019-03-12 19:49:10,321 INFO Epoch [15/44], Step [384/5437], Loss: 0.0026, Accuracy: 70.967%, Jaccard: 70.741%
+2019-03-12 19:49:11,023 INFO Epoch [15/44], Step [385/5437], Loss: 0.0235, Accuracy: 59.132%, Jaccard: 58.675%
+2019-03-12 19:49:11,725 INFO Epoch [15/44], Step [386/5437], Loss: 0.0029, Accuracy: 98.990%, Jaccard: 97.678%
+2019-03-12 19:49:12,428 INFO Epoch [15/44], Step [387/5437], Loss: 0.0020, Accuracy: 99.561%, Jaccard: 99.180%
+2019-03-12 19:49:13,134 INFO Epoch [15/44], Step [388/5437], Loss: 0.0412, Accuracy: 51.443%, Jaccard: 49.711%
+2019-03-12 19:49:13,837 INFO Epoch [15/44], Step [389/5437], Loss: 0.0093, Accuracy: 70.018%, Jaccard: 65.822%
+2019-03-12 19:49:14,541 INFO Epoch [15/44], Step [390/5437], Loss: 0.0632, Accuracy: 35.704%, Jaccard: 33.860%
+2019-03-12 19:49:15,245 INFO Epoch [15/44], Step [391/5437], Loss: 0.0359, Accuracy: 49.423%, Jaccard: 48.033%
+2019-03-12 19:49:15,947 INFO Epoch [15/44], Step [392/5437], Loss: 0.0059, Accuracy: 96.593%, Jaccard: 92.357%
+2019-03-12 19:49:16,651 INFO Epoch [15/44], Step [393/5437], Loss: 0.0085, Accuracy: 59.206%, Jaccard: 58.840%
+2019-03-12 19:49:17,354 INFO Epoch [15/44], Step [394/5437], Loss: 0.0032, Accuracy: 98.352%, Jaccard: 96.460%
+2019-03-12 19:49:18,059 INFO Epoch [15/44], Step [395/5437], Loss: 0.0195, Accuracy: 67.270%, Jaccard: 64.769%
+2019-03-12 19:49:18,767 INFO Epoch [15/44], Step [396/5437], Loss: 0.0182, Accuracy: 83.404%, Jaccard: 80.560%
+2019-03-12 19:49:19,468 INFO Epoch [15/44], Step [397/5437], Loss: 0.0188, Accuracy: 58.092%, Jaccard: 57.464%
+2019-03-12 19:49:20,174 INFO Epoch [15/44], Step [398/5437], Loss: 0.0360, Accuracy: 39.527%, Jaccard: 38.891%
+2019-03-12 19:49:20,880 INFO Epoch [15/44], Step [399/5437], Loss: 0.0282, Accuracy: 67.259%, Jaccard: 62.398%
+2019-03-12 19:49:21,589 INFO Epoch [15/44], Step [400/5437], Loss: 0.0029, Accuracy: 75.975%, Jaccard: 72.811%
+2019-03-12 19:49:22,294 INFO Epoch [15/44], Step [401/5437], Loss: 0.0052, Accuracy: 87.529%, Jaccard: 86.498%
+2019-03-12 19:49:22,997 INFO Epoch [15/44], Step [402/5437], Loss: 0.0196, Accuracy: 51.768%, Jaccard: 51.076%
+2019-03-12 19:49:23,700 INFO Epoch [15/44], Step [403/5437], Loss: 0.0098, Accuracy: 71.099%, Jaccard: 69.732%
+2019-03-12 19:49:24,407 INFO Epoch [15/44], Step [404/5437], Loss: 0.0238, Accuracy: 63.230%, Jaccard: 54.832%
+2019-03-12 19:49:25,106 INFO Epoch [15/44], Step [405/5437], Loss: 0.0053, Accuracy: 75.500%, Jaccard: 74.706%
+2019-03-12 19:49:25,809 INFO Epoch [15/44], Step [406/5437], Loss: 0.0681, Accuracy: 39.270%, Jaccard: 38.769%
+2019-03-12 19:49:26,514 INFO Epoch [15/44], Step [407/5437], Loss: 0.0024, Accuracy: 66.066%, Jaccard: 65.584%
+2019-03-12 19:49:27,220 INFO Epoch [15/44], Step [408/5437], Loss: 0.0068, Accuracy: 71.039%, Jaccard: 70.169%
+2019-03-12 19:49:27,921 INFO Epoch [15/44], Step [409/5437], Loss: 0.0018, Accuracy: 99.571%, Jaccard: 99.217%
+2019-03-12 19:49:28,629 INFO Epoch [15/44], Step [410/5437], Loss: 0.0030, Accuracy: 98.959%, Jaccard: 98.126%
+2019-03-12 19:49:29,335 INFO Epoch [15/44], Step [411/5437], Loss: 0.0147, Accuracy: 67.139%, Jaccard: 66.233%
+2019-03-12 19:49:30,042 INFO Epoch [15/44], Step [412/5437], Loss: 0.0150, Accuracy: 69.983%, Jaccard: 68.345%
+2019-03-12 19:49:30,741 INFO Epoch [15/44], Step [413/5437], Loss: 0.0055, Accuracy: 70.266%, Jaccard: 69.591%
+2019-03-12 19:49:31,441 INFO Epoch [15/44], Step [414/5437], Loss: 0.0102, Accuracy: 84.936%, Jaccard: 82.991%
+2019-03-12 19:49:32,141 INFO Epoch [15/44], Step [415/5437], Loss: 0.0072, Accuracy: 26.725%, Jaccard: 26.460%
+2019-03-12 19:49:32,848 INFO Epoch [15/44], Step [416/5437], Loss: 0.0066, Accuracy: 67.459%, Jaccard: 66.869%
+2019-03-12 19:49:33,550 INFO Epoch [15/44], Step [417/5437], Loss: 0.0096, Accuracy: 69.102%, Jaccard: 68.236%
+2019-03-12 19:49:34,253 INFO Epoch [15/44], Step [418/5437], Loss: 0.0092, Accuracy: 74.849%, Jaccard: 70.299%
+2019-03-12 19:49:34,952 INFO Epoch [15/44], Step [419/5437], Loss: 0.0073, Accuracy: 49.990%, Jaccard: 47.751%
+2019-03-12 19:49:35,663 INFO Epoch [15/44], Step [420/5437], Loss: 0.0112, Accuracy: 51.041%, Jaccard: 50.218%
+2019-03-12 19:49:36,369 INFO Epoch [15/44], Step [421/5437], Loss: 0.0057, Accuracy: 62.337%, Jaccard: 61.504%
+2019-03-12 19:49:37,074 INFO Epoch [15/44], Step [422/5437], Loss: 0.0139, Accuracy: 78.315%, Jaccard: 76.868%
+2019-03-12 19:49:37,799 INFO Epoch [15/44], Step [423/5437], Loss: 0.0033, Accuracy: 82.278%, Jaccard: 81.807%
+2019-03-12 19:49:38,507 INFO Epoch [15/44], Step [424/5437], Loss: 0.0059, Accuracy: 97.855%, Jaccard: 95.581%
+2019-03-12 19:49:39,212 INFO Epoch [15/44], Step [425/5437], Loss: 0.0122, Accuracy: 88.652%, Jaccard: 81.965%
+2019-03-12 19:49:39,918 INFO Epoch [15/44], Step [426/5437], Loss: 0.0363, Accuracy: 28.676%, Jaccard: 27.043%
+2019-03-12 19:49:40,623 INFO Epoch [15/44], Step [427/5437], Loss: 0.0075, Accuracy: 75.669%, Jaccard: 74.364%
+2019-03-12 19:49:41,324 INFO Epoch [15/44], Step [428/5437], Loss: 0.0157, Accuracy: 79.894%, Jaccard: 78.619%
+2019-03-12 19:49:42,027 INFO Epoch [15/44], Step [429/5437], Loss: 0.0069, Accuracy: 58.971%, Jaccard: 55.392%
+2019-03-12 19:49:42,726 INFO Epoch [15/44], Step [430/5437], Loss: 0.0045, Accuracy: 68.826%, Jaccard: 68.063%
+2019-03-12 19:49:43,426 INFO Epoch [15/44], Step [431/5437], Loss: 0.0091, Accuracy: 47.425%, Jaccard: 47.042%
+2019-03-12 19:49:44,138 INFO Epoch [15/44], Step [432/5437], Loss: 0.0057, Accuracy: 75.760%, Jaccard: 74.922%
+2019-03-12 19:49:44,847 INFO Epoch [15/44], Step [433/5437], Loss: 0.0060, Accuracy: 80.817%, Jaccard: 79.789%
+2019-03-12 19:49:45,547 INFO Epoch [15/44], Step [434/5437], Loss: 0.0061, Accuracy: 82.416%, Jaccard: 82.023%
+2019-03-12 19:49:46,254 INFO Epoch [15/44], Step [435/5437], Loss: 0.0054, Accuracy: 59.264%, Jaccard: 58.463%
+2019-03-12 19:49:46,964 INFO Epoch [15/44], Step [436/5437], Loss: 0.0066, Accuracy: 71.882%, Jaccard: 71.077%
+2019-03-12 19:49:47,666 INFO Epoch [15/44], Step [437/5437], Loss: 0.0022, Accuracy: 99.499%, Jaccard: 98.917%
+2019-03-12 19:49:48,368 INFO Epoch [15/44], Step [438/5437], Loss: 0.0021, Accuracy: 98.943%, Jaccard: 97.682%
+2019-03-12 19:49:49,073 INFO Epoch [15/44], Step [439/5437], Loss: 0.0042, Accuracy: 76.448%, Jaccard: 75.580%
+2019-03-12 19:49:49,777 INFO Epoch [15/44], Step [440/5437], Loss: 0.0101, Accuracy: 44.711%, Jaccard: 43.952%
+2019-03-12 19:49:50,480 INFO Epoch [15/44], Step [441/5437], Loss: 0.0032, Accuracy: 83.929%, Jaccard: 82.928%
+2019-03-12 19:49:51,193 INFO Epoch [15/44], Step [442/5437], Loss: 0.0079, Accuracy: 80.067%, Jaccard: 79.181%
+2019-03-12 19:49:51,897 INFO Epoch [15/44], Step [443/5437], Loss: 0.0531, Accuracy: 56.601%, Jaccard: 54.631%
+2019-03-12 19:49:52,601 INFO Epoch [15/44], Step [444/5437], Loss: 0.0074, Accuracy: 67.316%, Jaccard: 66.717%
+2019-03-12 19:49:53,306 INFO Epoch [15/44], Step [445/5437], Loss: 0.0062, Accuracy: 77.108%, Jaccard: 76.666%
+2019-03-12 19:49:54,011 INFO Epoch [15/44], Step [446/5437], Loss: 0.0027, Accuracy: 65.499%, Jaccard: 64.963%
+2019-03-12 19:49:54,714 INFO Epoch [15/44], Step [447/5437], Loss: 0.0110, Accuracy: 56.143%, Jaccard: 54.592%
+2019-03-12 19:49:55,427 INFO Epoch [15/44], Step [448/5437], Loss: 0.0106, Accuracy: 49.724%, Jaccard: 48.198%
+2019-03-12 19:49:56,127 INFO Epoch [15/44], Step [449/5437], Loss: 0.0033, Accuracy: 98.534%, Jaccard: 97.590%
+2019-03-12 19:49:56,829 INFO Epoch [15/44], Step [450/5437], Loss: 0.0204, Accuracy: 44.250%, Jaccard: 43.852%
+2019-03-12 19:49:57,536 INFO Epoch [15/44], Step [451/5437], Loss: 0.0211, Accuracy: 55.007%, Jaccard: 54.871%
+2019-03-12 19:49:58,242 INFO Epoch [15/44], Step [452/5437], Loss: 0.0089, Accuracy: 51.556%, Jaccard: 51.175%
+2019-03-12 19:49:58,944 INFO Epoch [15/44], Step [453/5437], Loss: 0.0029, Accuracy: 99.551%, Jaccard: 98.465%
+2019-03-12 19:49:59,648 INFO Epoch [15/44], Step [454/5437], Loss: 0.0017, Accuracy: 98.882%, Jaccard: 97.679%
+2019-03-12 19:50:00,355 INFO Epoch [15/44], Step [455/5437], Loss: 0.0033, Accuracy: 81.115%, Jaccard: 77.940%
+2019-03-12 19:50:01,057 INFO Epoch [15/44], Step [456/5437], Loss: 0.0011, Accuracy: 98.885%, Jaccard: 98.213%
+2019-03-12 19:50:01,755 INFO Epoch [15/44], Step [457/5437], Loss: 0.0064, Accuracy: 72.081%, Jaccard: 69.675%
+2019-03-12 19:50:02,466 INFO Epoch [15/44], Step [458/5437], Loss: 0.0082, Accuracy: 76.389%, Jaccard: 74.063%
+2019-03-12 19:50:03,168 INFO Epoch [15/44], Step [459/5437], Loss: 0.0065, Accuracy: 67.306%, Jaccard: 65.661%
+2019-03-12 19:50:03,874 INFO Epoch [15/44], Step [460/5437], Loss: 0.0036, Accuracy: 88.098%, Jaccard: 87.471%
+2019-03-12 19:50:04,578 INFO Epoch [15/44], Step [461/5437], Loss: 0.0027, Accuracy: 65.503%, Jaccard: 64.792%
+2019-03-12 19:50:05,339 INFO Epoch [15/44], Step [462/5437], Loss: 0.0133, Accuracy: 70.753%, Jaccard: 69.554%
+2019-03-12 19:50:06,078 INFO Epoch [15/44], Step [463/5437], Loss: 0.0034, Accuracy: 69.027%, Jaccard: 68.159%
+2019-03-12 19:50:06,811 INFO Epoch [15/44], Step [464/5437], Loss: 0.0018, Accuracy: 98.435%, Jaccard: 97.469%
+2019-03-12 19:50:07,546 INFO Epoch [15/44], Step [465/5437], Loss: 0.0234, Accuracy: 41.699%, Jaccard: 39.738%
+2019-03-12 19:50:08,279 INFO Epoch [15/44], Step [466/5437], Loss: 0.0025, Accuracy: 84.078%, Jaccard: 83.617%
+2019-03-12 19:50:09,009 INFO Epoch [15/44], Step [467/5437], Loss: 0.0289, Accuracy: 56.838%, Jaccard: 51.595%
+2019-03-12 19:50:09,755 INFO Epoch [15/44], Step [468/5437], Loss: 0.0140, Accuracy: 76.952%, Jaccard: 76.011%
+2019-03-12 19:50:10,495 INFO Epoch [15/44], Step [469/5437], Loss: 0.0134, Accuracy: 56.103%, Jaccard: 54.448%
+2019-03-12 19:50:11,218 INFO Epoch [15/44], Step [470/5437], Loss: 0.0067, Accuracy: 80.397%, Jaccard: 79.240%
+2019-03-12 19:50:11,922 INFO Epoch [15/44], Step [471/5437], Loss: 0.0032, Accuracy: 98.373%, Jaccard: 97.116%
+2019-03-12 19:50:12,624 INFO Epoch [15/44], Step [472/5437], Loss: 0.0369, Accuracy: 62.910%, Jaccard: 62.397%
+2019-03-12 19:50:13,328 INFO Epoch [15/44], Step [473/5437], Loss: 0.0007, Accuracy: 99.279%, Jaccard: 98.624%
+2019-03-12 19:50:14,034 INFO Epoch [15/44], Step [474/5437], Loss: 0.0008, Accuracy: 99.330%, Jaccard: 98.713%
+2019-03-12 19:50:14,756 INFO Epoch [15/44], Step [475/5437], Loss: 0.0219, Accuracy: 59.626%, Jaccard: 59.092%
+2019-03-12 19:50:15,462 INFO Epoch [15/44], Step [476/5437], Loss: 0.0022, Accuracy: 65.989%, Jaccard: 65.447%
+2019-03-12 19:50:16,167 INFO Epoch [15/44], Step [477/5437], Loss: 0.0127, Accuracy: 71.492%, Jaccard: 68.260%
+2019-03-12 19:50:16,869 INFO Epoch [15/44], Step [478/5437], Loss: 0.0067, Accuracy: 61.521%, Jaccard: 60.211%
+2019-03-12 19:50:17,569 INFO Epoch [15/44], Step [479/5437], Loss: 0.0191, Accuracy: 77.075%, Jaccard: 75.908%
+2019-03-12 19:50:18,270 INFO Epoch [15/44], Step [480/5437], Loss: 0.0040, Accuracy: 77.458%, Jaccard: 77.131%
+2019-03-12 19:50:18,976 INFO Epoch [15/44], Step [481/5437], Loss: 0.0065, Accuracy: 83.765%, Jaccard: 80.741%
+2019-03-12 19:50:19,680 INFO Epoch [15/44], Step [482/5437], Loss: 0.0214, Accuracy: 71.215%, Jaccard: 69.500%
+2019-03-12 19:50:20,382 INFO Epoch [15/44], Step [483/5437], Loss: 0.0008, Accuracy: 99.771%, Jaccard: 99.451%
+2019-03-12 19:50:21,083 INFO Epoch [15/44], Step [484/5437], Loss: 0.0056, Accuracy: 70.652%, Jaccard: 69.300%
+2019-03-12 19:50:21,784 INFO Epoch [15/44], Step [485/5437], Loss: 0.0105, Accuracy: 74.708%, Jaccard: 70.470%
+2019-03-12 19:50:22,488 INFO Epoch [15/44], Step [486/5437], Loss: 0.0034, Accuracy: 68.238%, Jaccard: 68.018%
+2019-03-12 19:50:23,194 INFO Epoch [15/44], Step [487/5437], Loss: 0.0136, Accuracy: 84.109%, Jaccard: 81.200%
+2019-03-12 19:50:23,894 INFO Epoch [15/44], Step [488/5437], Loss: 0.0499, Accuracy: 38.442%, Jaccard: 38.205%
+2019-03-12 19:50:24,595 INFO Epoch [15/44], Step [489/5437], Loss: 0.0061, Accuracy: 65.610%, Jaccard: 64.748%
+2019-03-12 19:50:25,300 INFO Epoch [15/44], Step [490/5437], Loss: 0.0046, Accuracy: 75.745%, Jaccard: 74.432%
+2019-03-12 19:50:26,001 INFO Epoch [15/44], Step [491/5437], Loss: 0.0022, Accuracy: 98.194%, Jaccard: 97.285%
+2019-03-12 19:50:26,703 INFO Epoch [15/44], Step [492/5437], Loss: 0.0102, Accuracy: 76.241%, Jaccard: 73.750%
+2019-03-12 19:50:27,408 INFO Epoch [15/44], Step [493/5437], Loss: 0.0231, Accuracy: 66.235%, Jaccard: 65.908%
+2019-03-12 19:50:28,112 INFO Epoch [15/44], Step [494/5437], Loss: 0.0471, Accuracy: 48.766%, Jaccard: 45.205%
+2019-03-12 19:50:28,816 INFO Epoch [15/44], Step [495/5437], Loss: 0.0020, Accuracy: 74.483%, Jaccard: 73.953%
+2019-03-12 19:50:29,516 INFO Epoch [15/44], Step [496/5437], Loss: 0.0050, Accuracy: 58.750%, Jaccard: 58.360%
+2019-03-12 19:50:30,221 INFO Epoch [15/44], Step [497/5437], Loss: 0.0049, Accuracy: 78.854%, Jaccard: 78.367%
+2019-03-12 19:50:30,924 INFO Epoch [15/44], Step [498/5437], Loss: 0.0088, Accuracy: 86.162%, Jaccard: 85.213%
+2019-03-12 19:50:31,633 INFO Epoch [15/44], Step [499/5437], Loss: 0.0127, Accuracy: 47.442%, Jaccard: 47.027%
+2019-03-12 19:50:32,334 INFO Epoch [15/44], Step [500/5437], Loss: 0.0492, Accuracy: 67.819%, Jaccard: 61.977%
+2019-03-12 19:50:33,040 INFO Epoch [15/44], Step [501/5437], Loss: 0.0057, Accuracy: 52.493%, Jaccard: 51.524%
+2019-03-12 19:50:33,741 INFO Epoch [15/44], Step [502/5437], Loss: 0.0012, Accuracy: 99.496%, Jaccard: 99.042%
+2019-03-12 19:50:34,449 INFO Epoch [15/44], Step [503/5437], Loss: 0.0050, Accuracy: 71.713%, Jaccard: 70.944%
+2019-03-12 19:50:35,149 INFO Epoch [15/44], Step [504/5437], Loss: 0.0126, Accuracy: 75.839%, Jaccard: 74.286%
+2019-03-12 19:50:35,853 INFO Epoch [15/44], Step [505/5437], Loss: 0.0090, Accuracy: 68.182%, Jaccard: 67.081%
+2019-03-12 19:50:36,555 INFO Epoch [15/44], Step [506/5437], Loss: 0.0117, Accuracy: 51.792%, Jaccard: 50.912%
+2019-03-12 19:50:37,257 INFO Epoch [15/44], Step [507/5437], Loss: 0.0188, Accuracy: 51.836%, Jaccard: 48.052%
+2019-03-12 19:50:37,956 INFO Epoch [15/44], Step [508/5437], Loss: 0.0091, Accuracy: 64.927%, Jaccard: 62.657%
+2019-03-12 19:50:38,665 INFO Epoch [15/44], Step [509/5437], Loss: 0.0041, Accuracy: 89.402%, Jaccard: 87.930%
+2019-03-12 19:50:39,371 INFO Epoch [15/44], Step [510/5437], Loss: 0.0053, Accuracy: 75.625%, Jaccard: 74.946%
+2019-03-12 19:50:40,075 INFO Epoch [15/44], Step [511/5437], Loss: 0.0069, Accuracy: 81.994%, Jaccard: 80.844%
+2019-03-12 19:50:40,776 INFO Epoch [15/44], Step [512/5437], Loss: 0.0317, Accuracy: 46.898%, Jaccard: 45.047%
+2019-03-12 19:50:41,475 INFO Epoch [15/44], Step [513/5437], Loss: 0.0007, Accuracy: 98.938%, Jaccard: 97.695%
+2019-03-12 19:50:42,179 INFO Epoch [15/44], Step [514/5437], Loss: 0.0025, Accuracy: 65.180%, Jaccard: 64.571%
+2019-03-12 19:50:42,894 INFO Epoch [15/44], Step [515/5437], Loss: 0.0355, Accuracy: 54.998%, Jaccard: 54.550%
+2019-03-12 19:50:43,596 INFO Epoch [15/44], Step [516/5437], Loss: 0.0033, Accuracy: 71.833%, Jaccard: 71.079%
+2019-03-12 19:50:44,300 INFO Epoch [15/44], Step [517/5437], Loss: 0.0032, Accuracy: 63.186%, Jaccard: 62.674%
+2019-03-12 19:50:45,004 INFO Epoch [15/44], Step [518/5437], Loss: 0.0106, Accuracy: 71.890%, Jaccard: 71.485%
+2019-03-12 19:50:45,706 INFO Epoch [15/44], Step [519/5437], Loss: 0.0047, Accuracy: 88.286%, Jaccard: 87.646%
+2019-03-12 19:50:46,410 INFO Epoch [15/44], Step [520/5437], Loss: 0.0186, Accuracy: 54.927%, Jaccard: 54.158%
+2019-03-12 19:50:47,120 INFO Epoch [15/44], Step [521/5437], Loss: 0.0026, Accuracy: 77.171%, Jaccard: 76.611%
+2019-03-12 19:50:47,825 INFO Epoch [15/44], Step [522/5437], Loss: 0.0056, Accuracy: 70.436%, Jaccard: 69.860%
