@@ -35,7 +35,9 @@
 =================================
 1- INSTALLATION AND DIRECTORIES
 =================================
-Installation only requires to unzip the "EntrenamientoRed.zip" file.
+Installation only requires to unzip the "EntrenamientoRed.zip" file and download
+the trained model with the link provided in modelo/link.txt (because it's larger
+than maximum size allowed by github).
 This tool can be launched by typing in the command line placed in src folder:
 
 >> python3 trainModel.py
