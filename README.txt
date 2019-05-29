@@ -24,7 +24,6 @@
   + os
   + resource
   + scikit-learn (0.20.0)
-  + tensorflow (1.10.1)
   + torch (0.4.1)
   + torchvision (0.2.1)
 
